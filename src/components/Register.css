@@ -1,0 +1,101 @@
+
+.form-control{
+
+    display:flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  label {
+    text-align: left;
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  input {
+    padding: 0.3rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .btn {
+    background-color: #264653;
+    color: whitesmoke;
+    font-size: 1rem;
+    border-radius: 20px;
+    border:none;
+    width: 10rem;
+    margin: 1rem auto;
+    padding: 0.7rem;
+  }
+  
+  .btn:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  
+  select {
+    font-size:1rem;
+    padding: 0.3rem;
+    width: 35%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    text-indent: 0.3rem;
+  }
+  
+  
+  .member {
+    
+    text-align: left;
+    margin-bottom: 0.5rem;
+    margin-top:0.5rem;
+  } 
+  
+  .member label {
+    padding: 0.5rem;
+  }
+  .gender {
+    margin-top: 0.5rem;
+    text-align: left;
+    font-size: 0.5rem;
+  } 
+  
+  .gender input {
+    margin-left: 0.4rem;
+  }
+
+  .gender label {
+    padding: 0.5rem;
+  }
+  
+  .newsletter {
+    text-align: left;
+    margin-top: 0.5rem;
+    margin-left:0.5rem;
+  }
+  
+
+  .newsletter input {
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+    
+  }
+
+  .err {
+    color: orange;
+    text-align: left;
+  }
+  
+  @media screen and (max-width: 600px) {
+    label {
+      font-size: 1rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
+    .gender label {
+      font-size: 0.7rem;
+    }
+    
+  }
