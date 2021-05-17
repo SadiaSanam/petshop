@@ -19,7 +19,7 @@ toast.configure();
 
 const Login = () => {
 
-    const { register, handleSubmit, errors, reset  } = useForm();
+    const { register, handleSubmit, formState: { errors }, reset  } = useForm();
 
     const {  updateInfo  } = useContext( GlobalContext ); 
    
@@ -85,13 +85,13 @@ const Login = () => {
           <div className='form-control'>
            
             <label htmlFor='email'>Email</label>
-            <input type='email' name='email' id='email' ref={register( {required:true})  }   />
+            <input type='email' name='email' id='email' ref={register("email", {required:true})  }   />
             { errors.email ? <span className='err'> email is required!</span> : null } 
           
             <label htmlFor='password'>Password</label>
             <input type='password' name='password' id='password' 
-                 ref={register({required:true, minLength:6, maxLength: 10} )} />
-            
+                 ref={register("password", {required:true, minLength:6, maxLength: 10} )} />
+
             { errors.password ? <span className='err'>invalid password (length: 6 to 10 )</span> : null}
            
            
