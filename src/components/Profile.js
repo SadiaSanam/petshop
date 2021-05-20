@@ -25,7 +25,7 @@ Modal.setAppElement('#root');
 
 const Profile = () => {
 
-    const { register, handleSubmit, errors, setValue, reset } = useForm();
+  const { register, handleSubmit, formState: { errors }, reset  } = useForm();
 
     const { info, updateInfo } = useContext( GlobalContext ); 
 
