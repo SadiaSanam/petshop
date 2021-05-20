@@ -15,7 +15,7 @@ toast.configure();
 
 const Register = () => {
 
-const { errors, register, handleSubmit, reset } = useForm();
+    const { register, handleSubmit, formState: { errors }, reset  } = useForm();
 
 const { updateInfo }  = useContext( GlobalContext )
 
@@ -94,10 +94,11 @@ const onSubmit = ( data ) => {
                 <input type='text' name='firstname' ref={ register( { required: true }  ) } />
                 { errors.firstname ? <span className='err'>Name is required</span> : null }
                 <label>Email</label>
-                <input type='email' name='email' ref={ register( { required: true }  ) } />
+                <input type='email' name='email' id='email' ref={register("email", {required:true})  }   />
                 { errors.email ? <span className='err'>Email is required</span> : null }
                 <label>Password</label>
-                <input type='password' name='password' ref={ register( { required: true }  ) } />
+                <input type='password' name='password' id='password' 
+                 ref={register("password", {required:true, minLength:6, maxLength: 10} )} />
                 { errors.password ? <span className='err'>Password is required</span> : null }
                 <label>Membership</label>
                 <select name='memtype' defaultValue='basic' id='memtype' ref={register}>
